@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Stepstone</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container" id="slideSplash" data-slide="1" style="display: none;">
+            <img class="logo" src="resources/img/logoIconOrangeyellow.png">
+            <h1 class="logoColor">Stepstone</h1>
+        </div>
+        <div class="container" id="slideSetup" data-slide="2" style="display: none;">
+            <h2>Setup</h2>
+            <h4>Let's get some formalities sorted. Using Stepstone requires an OpenAI API key.<br>
+                Enter it below, and we can continue.</h4>
+            <div class="textWrapper">
+                <input type="text" id="apiKey" placeholder="API Key">
+                <button class="continueButton navButton">Continue</button>
+            </div>
+        </div>
+        <div class="container" id="slideCompanyName" data-slide="3" style="display: none;">
+            <h2 class="logoColor">Stepstone</h2>
+            <h4>Stepstone makes taking your first steps to a solid brand identity a breeze.<br>
+                Get started by entering your company name.</h4>
+            <div class="textWrapper">
+                <input type="text" id="companyName" placeholder="Techbros inc." />
+                <button class="backButton navButton">Back</button>
+                <button class="continueButton navButton">Continue</button>
+            </div>
+        </div>
+        <div class="container" id="slideColor" data-slide="4" style="display: none;">
+            <div class="top">
+                <h3>Color</h3>
+                <p>Choose some colors you think resonate with your idea of a brand identity.<br>
+                    If you aren't sure, you may skip this step, and Stepstone will pick some colors for you.</p>
+            </div>
+            <div class="middle middleColor">
+                <div class="colorSelectButton red selected" data-color="red">
+                    <span class="labelColor">red</span>
+                </div>
+                <div class="colorSelectButton blue" data-color="blue">
+                    <span class="labelColor">blue</span>
+                </div>
+                <div class="colorSelectButton green" data-color="green">
+                    <span class="labelColor">green</span>
+                </div>
+                <button class="colorSelectButton midnight" data-color="midnight">
+                    <span class="labelColor">midnight</span>
+                </button>
+                <button class="colorSelectButton lightning" data-color="lightning">
+                    <span class="labelColor">lightning</span>
+                </button>
+                <button class="colorSelectButton business" data-color="business">
+                    <span class="labelColor">business</span>
+                </button>
+                <button class="colorSelectButton myc" data-color="myc">
+                    <span class="labelColor">MYC</span>
+                </button>
+                <button class="colorSelectButton slate" data-color="slate">
+                    <span class="labelColor">Slate</span>
+                </button>
+                <button class="colorSelectButton sunset" data-color="sunset">
+                    <span class="labelColor">Sunset</span>
+                </button>
+            </div>
+            <div class="bottom">
+                <button class="backButton navButton">Back</button>
+                <button class="continueButton navButton">Continue</button>
+            </div>
+        </div>
+        <div class="container" id="slideIndustry" data-slide="5" style="display: none;">
+            <div class="top">
+                <h3>Industry</h3>
+                <p>What industry is your company part of? <br>
+                    Pick one, or write your own.</p>
+            </div>
+            <form class="middle middleIndustry">
+                <div class="radio-button">
+                    <input type="radio" id="technology" name="industry" value="Technology">
+                    <label for="technology"><i class="fas fa-microchip"></i>Technology</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="healthcare" name="industry" value="Healthcare">
+                    <label for="healthcare"><i class="fas fa-notes-medical"></i>Healthcare</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="finance" name="industry" value="Finance">
+                    <label for="finance"><i class="fas fa-chart-line"></i>Finance</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="education" name="industry" value="Education">
+                    <label for="education"><i class="fas fa-book"></i>Education</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="retail" name="industry" value="Retail">
+                    <label for="retail"><i class="fas fa-shopping-cart"></i>Retail</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="real_estate" name="industry" value="Real Estate">
+                    <label for="real_estate"><i class="fas fa-home"></i>Real Estate</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="automotive" name="industry" value="Automotive">
+                    <label for="automotive"><i class="fas fa-car"></i>Automotive</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="food_beverage" name="industry" value="Food & Beverage">
+                    <label for="food_beverage"><i class="fas fa-utensils"></i>Food & Beverage</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="construction" name="industry" value="Construction">
+                    <label for="construction"><i class="fas fa-hammer"></i>Construction</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="hospitality" name="industry" value="Hospitality">
+                    <label for="hospitality"><i class="fas fa-bed"></i>Hospitality</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="entertainment" name="industry" value="Entertainment">
+                    <label for="entertainment"><i class="fas fa-film"></i>Entertainment</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="media_communications" name="industry" value="Media & Communications">
+                    <label for="media_communications"><i class="fas fa-bullhorn"></i>Media & Communications</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="agriculture" name="industry" value="Agriculture">
+                    <label for="agriculture"><i class="fas fa-seedling"></i>Agriculture</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="transportation_logistics" name="industry" value="Transportation & Logistics">
+                    <label for="transportation_logistics"><i class="fas fa-truck"></i>Transportation & Logistics</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="energy" name="industry" value="Energy">
+                    <label for="energy"><i class="fas fa-bolt"></i>Energy</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="fashion_apparel" name="industry" value="Fashion & Apparel">
+                    <label for="fashion_apparel"><i class="fas fa-tshirt"></i>Fashion & Apparel</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="legal_services" name="industry" value="Legal Services">
+                    <label for="legal_services"><i class="fas fa-gavel"></i>Legal Services</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="manufacturing" name="industry" value="Manufacturing">
+                    <label for="manufacturing"><i class="fas fa-industry"></i>Manufacturing</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" id="sports_fitness" name="industry" value="Sports & Fitness">
+                    <label for="sports_fitness"><i class="fas fa-dumbbell"></i>Sports & Fitness</label>
+                </div>                
+                <div class="custom-input">
+                    <input type="radio" id="custom" name="industry" value="custom">
+                    <input type="text" id="customInput" class="customInput" placeholder="Not there? Type your own here.">
+                </div>
+            </form>
+            <div class="bottom">
+                <button class="backButton navButton">Back</button>
+                <button class="continueButton navButton">Continue</button>
+            </div>
+        </div>
+        <div class="container" id="slideKeyValues" data-slide="6" style="display: none;">
+            <h2>Key Values</h2>
+            <h4>In a few words, explain what the key values of your company are.<br> You may skip this step by pressing continue without filling out.</h4>
+            <div class="textWrapper">
+                <input type="text" id="keyValues" placeholder="Example: Integrity, Innovation, Customer-centricity">
+                <button class="backButton navButton">Back</button>
+                <button class="continueButton navButton">Continue</button>
+            </div>
+        </div>
+        <div class="container" id="slideSlogan" data-slide="7" style="display: none;">
+            <h2>Slogan</h2>
+            <h4>Let's use your company's slogan for inspiration.<br> You may skip this step by pressing continue without filling out.</h4>
+            <div class="textWrapper">
+                <input type="text" id="slogan" placeholder="Example: Empowering Tomorrow, Today.">
+                <button class="backButton navButton">Back</button>
+                <button class="continueButton navButton">Continue</button>
+            </div>
+        </div>
+        <div class="container" id="slideAwait" data-slide="8" style="display: none;">
+            <h2>Taking the first step!</h3>
+            <h4>Your logo is being created. Sit back and relax.</h4>
+            <h5>Created <span id="progress">0/3</span> logos...</h5>
+        </div>
+        <div class="container" id="slideResults" data-slide="9" style="display: none;">
+            <div class="resultsTop">
+                <h2>The results are in.</h2>
+                <h4>Your logo is ready! Take a look.</h4>
+            </div>
+            <div id="resultsMiddle"></div>
+            <div class="resultsBottom">
+                <button class="navButton" id="regenerateButton">Create More</button>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="resources/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/regular.min.js" integrity="sha512-s0L3HnrNgQ+MciZHcaAlCjhbT5/p8JnZRjuV9CA/4qhX5ywNGy/4j8K6UBkFw5fdt2RVvn6aP4AKfKHhpkrKyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

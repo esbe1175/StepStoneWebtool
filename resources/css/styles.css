@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: nunito;
+}
+
+body {
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 90vw;
+    height: 90vh;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 40%;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: #19191A;
+    padding-left: 10px;
+}
+
+.logoColor {
+    color: #F1BC40;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 6rem;
+    color: #19191A;
+    margin: 0px 0px 0px 0px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 5rem;
+    color: #19191A;
+    margin: 0px 0px 0px 0px
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #19191A;
+    margin: 0rem 0rem 0.5rem 0rem;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #49494B;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+p {
+    color: #49494B;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+button {
+    cursor:pointer;
+}
+
+.navButton {
+    width: auto;
+    margin: 0rem 0rem 0rem 1rem;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: #19191A;
+    background-color: white;
+    font-weight: 600;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+#resultsMiddle img {
+    width: 33.33%;
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.container.visible {
+    opacity: 1;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+}
+
+.textWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height:50px;
+}
+
+.middle {
+    width: 100%;
+}
+
+.middleColor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.colorSelectButton {
+    height: 100px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    outline: 5px solid transparent;
+    border: none;
+}
+
+.colorSelectButton.selected {
+    outline: 3px solid #19191A;
+}
+
+.labelColor {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    z-index: 1;
+}
+
+.colorSelectButton.red { background: #FF2341; }
+.colorSelectButton.blue { background: #2E82FF; }
+.colorSelectButton.green { background: #47F17A; }
+.colorSelectButton.midnight { background: linear-gradient(90deg, #303339 0%,#303339 50%,#6C4DEB 50%,#6C4DEB 100%); }
+.colorSelectButton.lightning { background: linear-gradient(90deg, #FE7F2D 0%,#FE7F2D 50%,#F6E22B 50%,#F6E22B 100%); }
+.colorSelectButton.business { background: linear-gradient(90deg, #103783 0%,#103783 50%,#9BAFD9 50%,#9BAFD9 100%); }
+.colorSelectButton.myc { background: linear-gradient(90deg, #FE218B 0%,#FE218B 33.33%,#FED700 33.33%,#FED700 66.66%, #21B0FE 66.66%, #21B0FE 100%); }
+.colorSelectButton.slate { background: linear-gradient(90deg, #CB997E 0%,#CB997E 33.33%,#DDBEA9 33.33%,#DDBEA9 66.66%, #FFE8D6 66.66%, #FFE8D6 100%); }
+.colorSelectButton.sunset { background: linear-gradient(90deg, #233D4D 0%,#233D4D 33.33%,#FE7F2D 33.33%,#FE7F2D 66.66%, #FCCA46 66.66%, #FCCA46 100%); }
+
+.middleIndustry {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.radio-button, .custom-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c8c8ca;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    box-sizing: border-box;
+    color: #49494B;
+    background-color: #f5f5f7;
+}
+
+.customInput {
+    background: #f5f5f7;
+}
+
+.radio-button input[type="radio"], .custom-input input[type="radio"] {
+    display: none;
+}
+
+.radio-button label {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 10px;
+}
+
+.radio-button label i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.radio-button input[type="radio"]:checked + label,
+.custom-input input[type="radio"]:checked + input[type="text"] {
+    color: #19191A;
+}
+
+.radio-button.checked, .custom-input.checked > #customInput, .custom-input.checked {
+    border-color: #19191A;
+    background-color: #ffffff;
+}
+
+.custom-input input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.custom-input input[type="text"]:focus {
+    border-color: #19191A;
+    background-color: inherit;
+}
+
+.top {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.middle {
+    margin: 1rem 0rem 1rem 0rem
+}
+
+.bottom {
+    width: 100%;
+    display:flex;
+    justify-content: right;
+    height:50px;
+}
+
+#resultsMiddle {
+    display:flex;
+    justify-content: space-between;
+}
+
+#resultsMiddle > img {
+    width: 30%;
+    margin: 1rem 0rem 1rem 0rem
+}
+
+.resultsBottom {
+    height:50px;
+}
+
+#regenerateButton {
+    height: 100%;
+}
